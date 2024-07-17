@@ -34,8 +34,8 @@ function basa(pH) {
 }
 
 function sangatBasa(pH) {
-    if (pH <= 10.5) return 0;
-    else if (pH > 10.5 && pH <= 12.5) return (pH - 10.5) / 2;
+    if (pH <= 10) return 0;
+    else if (pH > 10 && pH <= 12) return (pH - 10) / 2;
     else return 1;
 }
 // Sugeno fuzzy inference 
