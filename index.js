@@ -4,7 +4,7 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-
+const setValue = 7
 // Membership functions for Sangat Asam, Asam, Normal, and Basa pH values
 function sangatAsam(pH) {
     if (pH <= 3) return 1;
@@ -78,28 +78,136 @@ const index = {
 
 rl.question(`insert pH> `, pH => {
     let presentValue = classifyAcidity(pH);
-    switch (presentValue) {
+    switch (classifyAcidity(setValue)) {
+        case "Normal":
+            switch (presentValue) {
+                case "Sangat Asam":
+                    phUp = "Banyak"
+                    phDown = "Kosong"
+                    break;
+                case "Asam":
+                    phUp = "Sedikit"
+                    phDown = "Kosong"
+                    break;
+                case "Normal":
+                    phUp = "Kosong"
+                    phDown = "Kosong"
+                    break;
+                case "Basa":
+                    phUp = "Kosong"
+                    phDown = "Sedikit"
+                    break;
+                case "Sangat Basa":
+                    phUp = "Kosong"
+                    phDown = "Banyak"
+                    break;
+                default:
+                    break;
+            }
+            break;
         case "Sangat Asam":
-            phUp = "Banyak"
-            phDown = "Kosong"
+            switch (presentValue) {
+                case "Sangat Asam":
+                    phUp = "Kosong"
+                    phDown = "Kosong"
+                    break;
+                case "Asam":
+                    phUp = "Kosong"
+                    phDown = "Sedikit"
+                    break;
+                case "Normal":
+                    phUp = "Kosong"
+                    phDown = "Normal"
+                    break;
+                case "Basa":
+                    phUp = "Kosong"
+                    phDown = "Banyak"
+                    break;
+                case "Sangat Basa":
+                    phUp = "Kosong"
+                    phDown = "Sangat Banyak"
+                    break;
+                default:
+                    break;
+            }
             break;
         case "Asam":
-            phUp = "Sedikit"
-            phDown = "Kosong"
-            break;
-        case "Normal":
-            phUp = "Kosong"
-            phDown = "Kosong"
+            switch (presentValue) {
+                case "Sangat Asam":
+                    phUp = "Sedikit"
+                    phDown = "Kosong"
+                    break;
+                case "Asam":
+                    phUp = "Kosong"
+                    phDown = "Kosong"
+                    break;
+                case "Normal":
+                    phUp = "Kosong"
+                    phDown = "Sedikit"
+                    break;
+                case "Basa":
+                    phUp = "Kosong"
+                    phDown = "Normal"
+                    break;
+                case "Sangat Basa":
+                    phUp = "Kosong"
+                    phDown = "Banyak"
+                    break;
+                default:
+                    break;
+            }
             break;
         case "Basa":
-            phUp = "Kosong"
-            phDown = "Sedikit"
+            switch (presentValue) {
+                case "Sangat Asam":
+                    phUp = "Sangat Banyak"
+                    phDown = "Kosong"
+                    break;
+                case "Asam":
+                    phUp = "Banyak"
+                    phDown = "Kosong"
+                    break;
+                case "Normal":
+                    phUp = "Sedikit"
+                    phDown = "Kosong"
+                    break;
+                case "Basa":
+                    phUp = "Kosong"
+                    phDown = "Kosong"
+                    break;
+                case "Sangat Basa":
+                    phUp = "Kosong"
+                    phDown = "Sedikit"
+                    break;
+                default:
+                    break;
+            }
             break;
         case "Sangat Basa":
-            phUp = "Kosong"
-            phDown = "Banyak"
-            break;
-        default:
+            switch (presentValue) {
+                case "Sangat Asam":
+                    phUp = "Sangat Banyak"
+                    phDown = "Kosong"
+                    break;
+                case "Asam":
+                    phUp = "Banyak"
+                    phDown = "Kosong"
+                    break;
+                case "Normal":
+                    phUp = "Sedikit"
+                    phDown = "Kosong"
+                    break;
+                case "Basa":
+                    phUp = "Sedikit"
+                    phDown = "Kosong"
+                    break;
+                case "Sangat Basa":
+                    phUp = "Kosong"
+                    phDown = "Kosong"
+                    break;
+                default:
+                    break;
+            }
             break;
     }
     const result = {
