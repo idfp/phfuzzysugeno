@@ -28,29 +28,35 @@
 	- Kosong,		Index = 0
 
 ## Rules
-if Set Value Sangat Asam and Present Value Sangat Asam then (pH_UP is Kosong) (pH_DOWN is Kosong)\
-if Set Value Sangat Asam and Present Value Asam then (pH_UP is Kosong) (pH_DOWN is Sedikit)\
-if Set Value Sangat Asam and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Normal)\
-if Set Value Sangat Asam and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Banyak)\
+if Set Value Sangat Asam and Present Value Sangat Asam then (pH_UP is Kosong) (pH_DOWN is Kosong)
+if Set Value Sangat Asam and Present Value Asam then (pH_UP is Kosong) (pH_DOWN is Sedikit)
+if Set Value Sangat Asam and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Normal)
+if Set Value Sangat Asam and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Banyak)
 if Set Value Sangat Asam and Present Value Sangat Basa then (pH_UP is Kosong) (pH_DOWN is Sangat Banyak)
 
-if Set Value Asam and Present Value Sangat Asam then (pH_UP is Sedikit) (pH_DOWN is Kosong)\
-if Set Value Asam and Present Value Asam then (pH_UP is Kosong) (pH_DOWN is Kosong)\
-if Set Value Asam and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Sedikit)\
-if Set Value Asam and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Normal)\
+if Set Value Asam and Present Value Sangat Asam then (pH_UP is Sedikit) (pH_DOWN is Kosong)
+if Set Value Asam and Present Value Asam then (pH_UP is Kosong) (pH_DOWN is Kosong)
+if Set Value Asam and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Sedikit)
+if Set Value Asam and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Normal)
 if Set Value Asam and Present Value Sangat Basa then (pH_UP is Kosong) (pH_DOWN is Banyak)
 
-if Set Value Normal and Present Value Sangat Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)\
-if Set Value Normal and Present Value Asam then (pH_UP is Sedikit) (pH_DOWN is Kosong)\
-if Set Value Normal and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Kosong)\
-if Set Value Normal and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Sedikit)\
+if Set Value Normal and Present Value Sangat Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)
+if Set Value Normal and Present Value Asam then (pH_UP is Sedikit) (pH_DOWN is Kosong)
+if Set Value Normal and Present Value Normal then (pH_UP is Kosong) (pH_DOWN is Kosong)
+if Set Value Normal and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Sedikit)
 if Set Value Normal and Present Value Sangat Basa then (pH_UP is Kosong) (pH_DOWN is Banyak)
 
-if Set Value Basa and Present Value Sangat Asam then (pH_UP is Sangat Banyak) (pH_DOWN is Kosong)\
-if Set Value Basa and Present Value Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)\
-if Set Value Basa and Present Value Normal then (pH_UP is Sedikit) (pH_DOWN is Kosong)\
-if Set Value Basa and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Kosong)\
+if Set Value Basa and Present Value Sangat Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)
+if Set Value Basa and Present Value Asam then (pH_UP is Normal) (pH_DOWN is Kosong)
+if Set Value Basa and Present Value Normal then (pH_UP is Sedikit) (pH_DOWN is Kosong)
+if Set Value Basa and Present Value Basa then (pH_UP is Kosong) (pH_DOWN is Kosong)
 if Set Value Basa and Present Value Sangat Basa then (pH_UP is Kosong) (pH_DOWN is Sedikit)
+
+if Set Value Sangat Basa and Present Value Sangat Asam then (pH_UP is Sangat Banyak) (pH_DOWN is Kosong)
+if Set Value Sangat Basa and Present Value Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)
+if Set Value Sangat Basa and Present Value Normal then (pH_UP is Normal) (pH_DOWN is Kosong)
+if Set Value Sangat Basa and Present Value Basa then (pH_UP is Sedikit) (pH_DOWN is Kosong)
+if Set Value Sangat Basa and Present Value Sangat Basa then (pH_UP is Kosong) (pH_DOWN is Kosong)
 
 if Set Value Sangat Basa and Present Value Sangat Asam then (pH_UP is Sangat Banyak) (pH_DOWN is Kosong)\
 if Set Value Sangat Basa and Present Value Asam then (pH_UP is Banyak) (pH_DOWN is Kosong)\
