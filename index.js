@@ -77,6 +77,8 @@ const index = {
 rl.question("insert setValue> ", setValue => {
     rl.question(`insert pH> `, pH => {
         let presentValue = classifyAcidity(pH);
+        console.log("Set value: " + classifyAcidity(setValue))
+        console.log("Present Value: " + presentValue)
         switch (classifyAcidity(setValue)) {
             case "Normal":
                 switch (presentValue) {
@@ -159,11 +161,11 @@ rl.question("insert setValue> ", setValue => {
             case "Basa":
                 switch (presentValue) {
                     case "Sangat Asam":
-                        phUp = "Sangat Banyak"
+                        phUp = "Banyak"
                         phDown = "Kosong"
                         break;
                     case "Asam":
-                        phUp = "Banyak"
+                        phUp = "Normal"
                         phDown = "Kosong"
                         break;
                     case "Normal":
