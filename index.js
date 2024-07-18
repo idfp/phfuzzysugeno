@@ -12,6 +12,7 @@ const rl = readline.createInterface({
  * normal ada di range ph 6 sampai 8 
  * basa ada di range ph 7.5 sampai 11
  * dan sangat basa ada di range ph 10 sampai 14+
+ * membership plot bisa diliat di https://raw.githubusercontent.com/idfp/phfuzzysugeno/main/membership-plot.png
  * 
  * Hasil dari masing masing fungsi ini disusun menjadi fuzzy set, sebagai penentu
  * decision index metode sugeno.
